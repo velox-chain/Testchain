@@ -2,9 +2,10 @@ FROM ubuntu:22.04
 
 RUN apt update && apt install -y curl ca-certificates
 
-RUN curl -L https://github.com/0xPolygon/polygon-edge/releases/latest/download/polygon-edge-linux-amd64 -o polygon-edge
-RUN chmod +x polygon-edge
-RUN mv polygon-edge /usr/local/bin/polygon-edge
+# Use fixed stable version
+RUN curl -L https://github.com/0xPolygon/polygon-edge/releases/download/v1.3.3/polygon-edge-linux-amd64 -o /usr/local/bin/polygon-edge
+
+RUN chmod +x /usr/local/bin/polygon-edge
 
 WORKDIR /app
 
