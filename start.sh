@@ -2,12 +2,10 @@
 
 mkdir -p /data/node1
 
-# Only create validator key if not exists
 if [ ! -f "/data/node1/consensus/validator.key" ]; then
   polygon-edge secrets init --data-dir /data/node1
 fi
 
-# Copy genesis only first time
 if [ ! -f "/data/genesis.json" ]; then
   cp /app/genesis.json /data/genesis.json
 fi
