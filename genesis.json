@@ -1,0 +1,23 @@
+{
+  "name": "TestMini Chain",
+  "chainId": 989898989,
+  "engine": {
+    "ibft": {
+      "type": "ibft"
+    }
+  },
+  "bootnodes": [],
+  "consensus": "ibft",
+  "params": {
+    "blockGasLimit": 10000000
+  },
+  "genesis": {
+    "gasLimit": "0x989680",
+    "difficulty": "0x1",
+    "alloc": {
+      "0xD7e39d8bbE6FA5eE59Ff8a945D93E16deaC56210": {
+        "balance": "1000000000000000000000000000"
+      }
+    }
+  }
+}
